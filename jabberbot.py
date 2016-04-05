@@ -632,11 +632,11 @@ class JabberBot(object):
             return
 
         # Ignore messages from users not seen by this bot
-        if jid not in self.__seen:
-            self.log.info('Ignoring message from unseen guest: %s' % jid)
-            self.log.debug("I've seen: %s" %
-                ["%s" % x for x in self.__seen.keys()])
-            return
+        # if jid not in self.__seen:
+        #     self.log.info('Ignoring message from unseen guest: %s' % jid)
+        #     self.log.debug("I've seen: %s" %
+        #         ["%s" % x for x in self.__seen.keys()])
+        #     return
 
         # Remember the last-talked-in message thread for replies
         # FIXME i am not threadsafe
